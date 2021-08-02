@@ -12,7 +12,7 @@ fn main() -> io::Result<()> {
         numbers.push(number);
         for &num1 in &numbers {
             if num1 == (2020 - number) {
-                println!("{}", num1 * (2020 - num1));
+                println!("{}", num1 * number);
             }
         }
     }
@@ -22,6 +22,7 @@ fn main() -> io::Result<()> {
             for &num3 in &numbers {
                 if num3 == (2020 - (num1 + num2)) {
                     println!("{}", num1 * num2 * num3);
+                    break;
                 }
             }
         }
